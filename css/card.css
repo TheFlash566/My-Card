@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/bg2.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    height: 25em;
+    width: 20em;
+    background-image: url(../img/ws2.JPG);
+    border-radius: 30px;
+    background-size: cover;
+    padding: 8rem 0 0;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    max-width: 40ch;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    outline: 2px solid #54f954;
+}
+
+.card:hover .card-title::after{
+    transform: scaleX(1);
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after {
+    content: "";
+    height: 4px;
+    position: absolute;
+    width: 100%;
+    background: #54f954;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+    transform-origin: left;
+}
+
+.card-content {
+   padding: 1.5em;
+   transform: translateY(70%);
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
+.card-content > *:not(.card-title) {
+    opacity: 0;
+    transition-delay: 500ms ease;
+}
+
+.card:hover .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 800ms;
+}
+
+.card-button {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    background: #54f954;
+}
+
+.card-button:hover, 
+.card-button:focus {
+    background: #31bb31;
+}
