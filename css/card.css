@@ -5,22 +5,24 @@
 }
 
 body {
-    background-image: url(../img/bg2.JPG);
+    background-image: url(../img/newBg3.JPG);
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-position: bottom; */
 }
 
 .card {
-    height: 25em;
+    height: 36em;
     width: 20em;
     background-image: url(../img/ws2.JPG);
     border-radius: 30px;
     background-size: cover;
-    padding: 8rem 0 0;
+    padding: 1rem 0 0;
     overflow: hidden;
     transition: transform 500ms ease;
     max-width: 40ch;
     color: white;
+    border: 2px solid #54f954;
 }
 
 .card:hover {
@@ -34,12 +36,15 @@ body {
 
 .card-title {
     position: relative;
-    width: max-content;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
 }
 
 .card-title::after {
     content: "";
-    height: 4px;
+    height: 2px;
     position: absolute;
     width: 100%;
     background: #54f954;
@@ -47,12 +52,13 @@ body {
     bottom: 0;
     transform: scaleX(0);
     transition: transform 500ms ease;
-    transform-origin: left;
+    transform-origin: center;
 }
 
 .card-content {
    padding: 1.5em;
-   transform: translateY(70%);
+   transform: translateY(24%);
+   padding-top: 0px;
 }
 
 .card:hover .card-content {
@@ -64,6 +70,19 @@ body {
     transition-delay: 500ms ease;
 }
 
+.linker {
+    opacity: 1 !important; 
+    padding-bottom: 1.5em;
+}
+
+.card:hover .linker {
+    padding-bottom: 0px;
+}
+
+.myProfile {
+    opacity: 1 !important;
+}
+
 .card:hover .card-content > *:not(.card-title) {
     opacity: 1;
     transition-delay: 800ms;
@@ -71,12 +90,159 @@ body {
 
 .card-button {
     text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    background: #54f954;
+    color: white;
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid #54f954;
+    border-radius: 18px;
+}
+
+.hire-me-1 {
+    margin-left: 75px;
+    opacity: 1 !important;
+    padding: 15px 35px !important;
+}
+
+.card:hover .hire-me-1 {
+    display: none;
+}
+
+.follow-me {
+    margin-right: 20px;
+    margin-left: 7px;
 }
 
 .card-button:hover, 
 .card-button:focus {
-    background: #31bb31;
+    background: #008000a6;
+    border: 2px solid;
+    transition: 500ms ease-out;
+    transition-delay: 0ms !important;
 }
+
+.myProfile {
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(../img/myProfile.jpg);
+    background-size: cover;
+    margin-left: 42px;
+    display: inline-block;
+    border: 2px solid #54f954;
+}
+
+.myLinkS {
+    opacity: 1 !important;
+    font-size: 45px;
+    margin-right: 20px;
+    margin-left: 16px;
+    color: #54f954;
+    
+}
+
+.myLinkS:hover {
+    color: #b4b4e9;
+}
+
+.myLinks {
+    opacity: 1 !important;
+    font-size: 45px;
+    margin-right: 20px;
+    color: #54f954;
+}
+
+.myLinks:hover {
+    color: #b4b4e9;
+}
+
+.abtMe {
+    color: #54f954;
+    margin-bottom: -5px;
+}
+
+.card:hover .myProfile {
+    animation: spin 2s linear;
+    animation-name: myprofile;
+    animation-iteration-count: 1;
+}
+
+@keyframes myprofile {
+    0% { transform: rotateY(0deg);}
+    100% { transform: rotateY(360deg);}
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .iya {
+        padding-top: 0em !important;
+        height: 45em !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .card {
+        padding: 0rem 0 0 !important;
+        width: 17em !important;
+        height: 40em !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .myProfile {
+        margin-left: 16px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .card-title {
+        font-size: 32px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .hire-me-1 {
+        margin-left: 50px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .myLinkS {
+        margin-right: 15px !important;
+        font-size: 40px !important;
+        margin-left: 0px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px){
+    .myLinks {
+        margin-right: 18px !important;
+        font-size: 40px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .card:hover .follow-me {
+        margin-left: 0px !important;
+        padding: 10px 16px !important;
+        margin-right: 18px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .card:hover .hire-me-2 {
+        padding: 10px 16px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .card:hover  {
+        padding: 1.5rem 0 0 !important;
+        transform: scale(1.05) !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 418px) {
+    .card-title::after {
+        height: 2px !important;
+    }
+}
+
